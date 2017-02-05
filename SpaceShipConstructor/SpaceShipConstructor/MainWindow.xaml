@@ -7,8 +7,16 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525"
         xmlns:HelixToolkit="clr-namespace:HelixToolkit.Wpf;assembly=HelixToolkit.Wpf">
-    <Grid>
-        <HelixToolkit:HelixViewport3D ZoomExtentsWhenLoaded="True" Margin="0" Name="m_helix_viewport">
+    <Grid Name="overall_grid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <HelixToolkit:HelixViewport3D Grid.Column="0" ZoomExtentsWhenLoaded="True" Margin="0" Name="Helix_viewport_left">
+            <HelixToolkit:SunLight/>
+            <ModelVisual3D Content="{Binding Model}"/>
+        </HelixToolkit:HelixViewport3D>
+        <HelixToolkit:HelixViewport3D Grid.Column="1"  ZoomExtentsWhenLoaded="True" Margin="0" Name="Helix_viewport_right">
             <HelixToolkit:SunLight/>
             <ModelVisual3D Content="{Binding Model}"/>
         </HelixToolkit:HelixViewport3D>
