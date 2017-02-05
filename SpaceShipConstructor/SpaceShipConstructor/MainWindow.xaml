@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SpaceShipConstructor"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="525"
+        xmlns:HelixToolkit="clr-namespace:HelixToolkit.Wpf;assembly=HelixToolkit.Wpf">
     <Grid>
-        
+        <HelixToolkit:HelixViewport3D ZoomExtentsWhenLoaded="True" Margin="0" Name="m_helix_viewport">
+            <HelixToolkit:SunLight/>
+            <ModelVisual3D Content="{Binding Model}"/>
+        </HelixToolkit:HelixViewport3D>
     </Grid>
 </Window>
