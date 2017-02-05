@@ -8,3 +8,5 @@ Here is a screenshot made on Android smartphone with a streaming client launched
 <p align="center">
   <img src="VirtualRealitySpaceShipConstructor.png" width="350"/>
 </p>
+
+The model of a spaceship made in 3ds max and exported to .obj file which then is loaded by Helix into WPF application
